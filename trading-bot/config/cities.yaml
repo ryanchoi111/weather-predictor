@@ -1,0 +1,26 @@
+cities:
+  - name: "New York"
+    series_ticker: "KXHIGHNY"
+    latitude: 40.7128
+    longitude: -74.006
+    nws_station: "KNYC"
+  - name: "Chicago"
+    series_ticker: "KXHIGHCHI"
+    latitude: 41.8781
+    longitude: -87.6298
+    nws_station: "KORD"
+  - name: "Los Angeles"
+    series_ticker: "KXHIGHLA"
+    latitude: 34.0522
+    longitude: -118.2437
+    nws_station: "KLAX"
+  - name: "Miami"
+    series_ticker: "KXHIGHMIA"
+    latitude: 25.7617
+    longitude: -80.1918
+    nws_station: "KMIA"
+  - name: "Austin"
+    series_ticker: "KXHIGHAUS"
+    latitude: 30.2672
+    longitude: -97.7431
+    nws_station: "KAUS"

@@ -1,0 +1,25 @@
+[project]
+name = "weather-trading-bot"
+version = "0.1.0"
+description = "Automated weather prediction trading bot for Kalshi"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "cryptography>=42.0",
+    "scipy>=1.12",
+    "numpy>=1.26",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.1",
+    "apscheduler>=3.10",
+    "structlog>=24.1",
+    "aiosqlite>=0.20",
+    "pyyaml>=6.0",
+    "websockets>=12.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.3"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

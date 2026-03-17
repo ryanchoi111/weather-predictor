@@ -1,0 +1,16 @@
+[project]
+name = "weather-forecast-service"
+version = "0.1.0"
+description = "GPU-accelerated weather ensemble forecast service"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.109",
+    "uvicorn>=0.27",
+    "pydantic>=2.6",
+    "numpy>=1.26",
+    "runpod>=1.7",
+]
+
+[project.optional-dependencies]
+gpu = ["earth2studio>=0.3", "torch>=2.2"]
+dev = ["pytest>=8.0", "ruff>=0.3"]

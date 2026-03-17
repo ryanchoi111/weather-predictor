@@ -1,0 +1,30 @@
+trading:
+  schedule_times: ["06:00", "12:00", "16:00", "20:00"]
+  timezone: "America/New_York"
+
+strategy:
+  edge_threshold_cents: 5
+  kelly_fraction: 0.25
+  min_probability_floor: 0.005
+  max_ensemble_std_f: 8.0
+  min_liquidity_contracts: 10
+  forecast_staleness_hours: 12
+
+risk:
+  max_single_position_pct: 0.05
+  max_event_exposure_pct: 0.15
+  max_daily_loss_pct: 0.10
+  max_drawdown_pct: 0.15
+  max_open_orders: 20
+  min_bankroll_dollars: 100
+
+forecast:
+  provider: "mock"  # "mock" | "runpod" | "direct"
+  service_url: "http://localhost:8000"
+  timeout_seconds: 300
+  max_retries: 3
+  mock_mode: true
+  runpod_endpoint_id: ""
+  runpod_api_key: ""
+
+discord_webhook_url: ""
