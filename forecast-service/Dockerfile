@@ -1,8 +1,8 @@
-FROM nvcr.io/nvidia/pytorch:24.01-py3
+FROM python:3.11-slim
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir earth2studio fastapi uvicorn pydantic numpy runpod
+RUN pip install --no-cache-dir fastapi uvicorn pydantic numpy runpod
 
 COPY src/ /app/src/
 
