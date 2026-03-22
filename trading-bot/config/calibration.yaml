@@ -1,0 +1,21 @@
+# Calibration pipeline configuration
+
+bias_correction:
+  enabled: true
+  model_dir: "./data/bias_models/"
+  method: "quantile_mapping"  # quantile_mapping | linear
+  percentile_count: 101
+
+metar_fusion:
+  enabled: true
+  max_shift_f: 5.0
+  negative_shift_damping: 0.3
+
+ensemble:
+  kde_bandwidth: 0.3
+  min_prob: 0.005
+
+# Historical data fetch settings (for scripts)
+history:
+  lookback_years: 2
+  networks: ["IA_ASOS", "AWOS"]

@@ -4,6 +4,7 @@ from dataclasses import dataclass
 @dataclass
 class Signal:
     ticker: str
+    title: str
     side: str  # "yes" or "no"
     edge_cents: float
     model_prob: float
@@ -13,6 +14,7 @@ class Signal:
 
 def generate_signals(
     tickers: list[str],
+    titles: list[str],
     model_probs: list[float],
     market_prices_cents: list[int],
     ensemble_std: float,
@@ -31,8 +33,11 @@ def generate_signals(
         return []
 
     signals = []
-    for i, (ticker, prob, price) in enumerate(zip(tickers, model_probs, market_prices_cents)):
+    for i, (ticker, title, prob, price) in enumerate(zip(tickers, titles, model_probs, market_prices_cents)):
         if min_volume and min_volume[i] < min_liquidity:
+            continue
+
+        if price >= 95 or price <= 5:
             continue
 
         model_cents = prob * 100
@@ -44,6 +49,7 @@ def generate_signals(
         side = "yes" if edge > 0 else "no"
         signals.append(Signal(
             ticker=ticker,
+            title=title,
             side=side,
             edge_cents=abs(edge),
             model_prob=prob,

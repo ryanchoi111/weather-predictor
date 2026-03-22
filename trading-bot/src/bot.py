@@ -1,8 +1,18 @@
 import asyncio
+import os
 import subprocess
 from pathlib import Path
 
 import yaml
+
+# Load .env into os.environ
+_env_path = Path(__file__).parent.parent / ".env"
+if _env_path.exists():
+    for line in _env_path.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            key, _, val = line.partition("=")
+            os.environ.setdefault(key.strip(), val.strip())
 import structlog
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
@@ -17,6 +27,9 @@ from .strategy.probability import compute_bucket_probabilities
 from .strategy.signals import generate_signals
 from .strategy.sizing import kelly_size
 from .strategy.risk import RiskLimits, RiskState, RiskBreachError, check_pre_trade, update_high_water_mark
+from .discord_bot import ApprovalBot
+from .nws import get_current_temp_f
+from .calibration.pipeline import run_calibration_pipeline
 
 log = get_logger("bot")
 
@@ -31,9 +44,9 @@ class WeatherBot:
         forecast_cfg = self.config.get("forecast", {})
         self.forecast = ForecastClient(
             provider=forecast_cfg.get("provider", "mock"),
-            base_url=forecast_cfg.get("service_url", "http://localhost:8000"),
-            runpod_endpoint_id=forecast_cfg.get("runpod_endpoint_id", ""),
-            runpod_api_key=forecast_cfg.get("runpod_api_key", ""),
+            base_url=forecast_cfg.get("service_url", os.getenv("FORECAST_SERVICE_URL", "http://localhost:8000")),
+            runpod_endpoint_id=forecast_cfg.get("runpod_endpoint_id", "") or os.getenv("RUNPOD_ENDPOINT_ID", ""),
+            runpod_api_key=forecast_cfg.get("runpod_api_key", "") or os.getenv("RUNPOD_API_KEY", ""),
             timeout=forecast_cfg.get("timeout_seconds", 300),
             max_retries=forecast_cfg.get("max_retries", 3),
         )
@@ -43,8 +56,33 @@ class WeatherBot:
         self.risk_state = RiskState()
         self.discord_url = self.config.get("discord_webhook_url", "")
 
+        self.calibration_cfg = self._load_calibration_config()
+
+        discord_cfg = self.config.get("discord", {})
+        bot_token = discord_cfg.get("bot_token", "")
+        channel_id = discord_cfg.get("channel_id", "")
+        self.approval_bot: ApprovalBot | None = None
+        forecast_channel_id = discord_cfg.get("forecast_channel_id", "")
+        if bot_token and channel_id:
+            self.approval_bot = ApprovalBot(
+                bot_token=bot_token,
+                channel_id=int(channel_id),
+                db=self.db,
+                kalshi=self.kalshi,
+                risk_limits=self.risk_limits,
+                risk_state=self.risk_state,
+                forecast_channel_id=int(forecast_channel_id) if forecast_channel_id else None,
+            )
+
     def _load_config(self) -> dict:
         config_path = Path(__file__).parent.parent / "config" / "settings.yaml"
+        if config_path.exists():
+            with open(config_path) as f:
+                return yaml.safe_load(f) or {}
+        return {}
+
+    def _load_calibration_config(self) -> dict:
+        config_path = Path(__file__).parent.parent / "config" / "calibration.yaml"
         if config_path.exists():
             with open(config_path) as f:
                 return yaml.safe_load(f) or {}
@@ -67,24 +105,57 @@ class WeatherBot:
         update_high_water_mark(self.risk_state)
 
         strategy_cfg = self.config.get("strategy", {})
+        all_signals = []
 
         for city in self.cities:
             try:
-                await self._process_city(city, balance_cents, strategy_cfg)
+                city_signals = await self._process_city(city, balance_cents, strategy_cfg)
+                all_signals.extend(city_signals)
             except Exception as e:
                 log.error("city_error", city=city["name"], error=str(e))
                 await send_discord_alert(self.discord_url, f"Error processing {city['name']}: {e}", "error")
 
+        if self.approval_bot and all_signals:
+            try:
+                await self.approval_bot.send_cycle_summary(all_signals)
+            except Exception as e:
+                log.error("cycle_summary_failed", error=str(e))
+
         log.info("cycle_complete")
 
-    async def _process_city(self, city: dict, balance_cents: int, strategy_cfg: dict):
+    async def _process_city(self, city: dict, balance_cents: int, strategy_cfg: dict) -> list[dict]:
         log.info("processing_city", city=city["name"])
+        collected_signals = []
 
         request = ForecastRequest(
             latitude=city["latitude"],
             longitude=city["longitude"],
         )
         forecast = await self.forecast.get_forecast(request)
+
+        # Sanity check: compare model forecast vs current observed temp
+        nws_station = city.get("nws_station", "")
+        observed_f = await get_current_temp_f(nws_station) if nws_station else None
+        max_deviation = strategy_cfg.get("max_forecast_deviation_f", 10.0)
+        if observed_f is not None:
+            deviation = abs(observed_f - forecast.mean_f)
+            if deviation > max_deviation:
+                log.warning(
+                    "forecast_deviation",
+                    city=city["name"],
+                    model_mean=f"{forecast.mean_f:.1f}F",
+                    observed=f"{observed_f:.1f}F",
+                    deviation=f"{deviation:.1f}F",
+                )
+                if self.approval_bot:
+                    await self.approval_bot.send_forecast_warning(
+                        city=city["name"],
+                        model_mean=forecast.mean_f,
+                        observed=observed_f,
+                        deviation=deviation,
+                    )
+                return collected_signals
+
         forecast_id = await self.db.save_forecast(
             city=city["name"],
             model=forecast.model_name,
@@ -95,7 +166,7 @@ class WeatherBot:
         events = await get_weather_events(self.kalshi, city["series_ticker"])
         if not events:
             log.info("no_events", city=city["name"])
-            return
+            return collected_signals
 
         for event in events:
             markets = await get_event_markets(self.kalshi, event["event_ticker"])
@@ -104,14 +175,49 @@ class WeatherBot:
                 continue
 
             bucket_ranges = [(b.low_temp, b.high_temp) for b in buckets]
-            model_probs = compute_bucket_probabilities(
-                forecast.temperatures_f,
-                bucket_ranges,
-                min_prob=strategy_cfg.get("min_probability_floor", 0.005),
-            )
+
+            # Use calibration pipeline if enabled, otherwise raw KDE
+            cal_cfg = self.calibration_cfg
+            bias_enabled = cal_cfg.get("bias_correction", {}).get("enabled", False)
+            metar_enabled = cal_cfg.get("metar_fusion", {}).get("enabled", False)
+            if bias_enabled or metar_enabled:
+                from datetime import datetime
+                metar_station = city.get("metar_station") if metar_enabled else None
+                now_hour = datetime.now().hour
+                model_probs, cal_forecast = await run_calibration_pipeline(
+                    city=city["name"],
+                    ensemble_temps_f=forecast.temperatures_f,
+                    bucket_ranges=bucket_ranges,
+                    metar_station=metar_station,
+                    forecast_hour=now_hour,
+                    bias_model_dir=cal_cfg.get("bias_correction", {}).get("model_dir", "./data/bias_models/"),
+                    kde_bandwidth=cal_cfg.get("ensemble", {}).get("kde_bandwidth", 0.3),
+                    min_prob=strategy_cfg.get("min_probability_floor", 0.005),
+                    max_shift_f=cal_cfg.get("metar_fusion", {}).get("max_shift_f", 5.0),
+                )
+            else:
+                model_probs = compute_bucket_probabilities(
+                    forecast.temperatures_f,
+                    bucket_ranges,
+                    min_prob=strategy_cfg.get("min_probability_floor", 0.005),
+                )
+
+            if self.approval_bot:
+                try:
+                    await self.approval_bot.send_forecast_summary(
+                        city=city["name"],
+                        mean_temp=forecast.mean_f,
+                        std_temp=forecast.std_f,
+                        n_members=len(forecast.temperatures_f),
+                        buckets=buckets,
+                        model_probs=model_probs,
+                    )
+                except Exception as e:
+                    log.error("forecast_summary_failed", city=city["name"], error=str(e))
 
             signals = generate_signals(
                 tickers=[b.ticker for b in buckets],
+                titles=[b.title for b in buckets],
                 model_probs=model_probs,
                 market_prices_cents=[b.yes_price for b in buckets],
                 ensemble_std=forecast.std_f,
@@ -154,34 +260,70 @@ class WeatherBot:
                     contracts=contracts,
                 )
 
-                try:
-                    result = await create_order(
-                        self.kalshi, signal.ticker, signal.side, price, contracts,
-                    )
-                    order_id = result.get("order", {}).get("order_id", "unknown")
-                    await self.db.save_trade(
-                        signal_id=signal_id,
-                        ticker=signal.ticker,
-                        side=signal.side,
-                        action="buy",
-                        price_cents=price,
-                        count=contracts,
-                        order_id=order_id,
-                        status="placed",
-                    )
-                    self.risk_state.open_order_count += 1
-                    event_ticker = event["event_ticker"]
-                    self.risk_state.event_exposures[event_ticker] = (
-                        self.risk_state.event_exposures.get(event_ticker, 0) + order_cost
-                    )
-                    log.info("order_placed", ticker=signal.ticker, side=signal.side,
-                             price=price, contracts=contracts, edge=signal.edge_cents)
-                    await send_discord_alert(
-                        self.discord_url,
-                        f"Order: {signal.side.upper()} {contracts}x {signal.ticker} @{price}¢ (edge {signal.edge_cents:.1f}¢)",
-                    )
-                except Exception as e:
-                    log.error("order_failed", ticker=signal.ticker, error=str(e))
+                collected_signals.append({
+                    "city": city["name"],
+                    "ticker": signal.ticker,
+                    "title": signal.title,
+                    "side": signal.side,
+                    "edge_cents": signal.edge_cents,
+                    "model_prob": signal.model_prob,
+                    "market_price_cents": signal.market_price_cents,
+                    "contracts": contracts,
+                    "confidence": signal.confidence,
+                })
+
+                if self.approval_bot:
+                    try:
+                        await self.approval_bot.send_approval_request(
+                            signal_id=signal_id,
+                            city=city["name"],
+                            ticker=signal.ticker,
+                            contract_title=signal.title,
+                            side=signal.side,
+                            contracts=contracts,
+                            price_cents=price,
+                            edge_cents=signal.edge_cents,
+                            model_prob=signal.model_prob,
+                            market_price_cents=signal.market_price_cents,
+                            mean_temp=forecast.mean_f,
+                            std_temp=forecast.std_f,
+                            n_members=len(forecast.temperatures_f),
+                            event_ticker=event["event_ticker"],
+                            order_cost_cents=order_cost,
+                        )
+                    except Exception as e:
+                        log.error("approval_request_failed", ticker=signal.ticker, error=str(e))
+                else:
+                    try:
+                        result = await create_order(
+                            self.kalshi, signal.ticker, signal.side, price, contracts,
+                        )
+                        order_id = result.get("order", {}).get("order_id", "unknown")
+                        await self.db.save_trade(
+                            signal_id=signal_id,
+                            ticker=signal.ticker,
+                            side=signal.side,
+                            action="buy",
+                            price_cents=price,
+                            count=contracts,
+                            order_id=order_id,
+                            status="placed",
+                        )
+                        self.risk_state.open_order_count += 1
+                        event_ticker = event["event_ticker"]
+                        self.risk_state.event_exposures[event_ticker] = (
+                            self.risk_state.event_exposures.get(event_ticker, 0) + order_cost
+                        )
+                        log.info("order_placed", ticker=signal.ticker, side=signal.side,
+                                 price=price, contracts=contracts, edge=signal.edge_cents)
+                        await send_discord_alert(
+                            self.discord_url,
+                            f"Order: {signal.side.upper()} {contracts}x {signal.ticker} @{price}¢ (edge {signal.edge_cents:.1f}¢)",
+                        )
+                    except Exception as e:
+                        log.error("order_failed", ticker=signal.ticker, error=str(e))
+
+        return collected_signals
 
     async def start(self):
         setup_logging()
@@ -208,6 +350,10 @@ class WeatherBot:
         log.info("bot_started", schedule=trading_cfg.get("schedule_times"))
         await send_discord_alert(self.discord_url, "Weather bot started")
 
+        if self.approval_bot:
+            asyncio.create_task(self.approval_bot.start_bot())
+            log.info("discord_approval_bot_starting")
+
         try:
             await self.run_cycle()
             while True:
@@ -217,6 +363,8 @@ class WeatherBot:
         finally:
             scheduler.shutdown()
             caffeinate.terminate()
+            if self.approval_bot and not self.approval_bot.is_closed():
+                await self.approval_bot.close()
             await self.kalshi.close()
             await self.db.close()
 

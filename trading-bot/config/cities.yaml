@@ -4,23 +4,33 @@ cities:
     latitude: 40.7128
     longitude: -74.006
     nws_station: "KNYC"
+    metar_station: "KJFK"
+    timezone: "America/New_York"
   - name: "Chicago"
     series_ticker: "KXHIGHCHI"
     latitude: 41.8781
     longitude: -87.6298
     nws_station: "KORD"
+    metar_station: "KORD"
+    timezone: "America/Chicago"
   - name: "Los Angeles"
     series_ticker: "KXHIGHLA"
     latitude: 34.0522
     longitude: -118.2437
     nws_station: "KLAX"
+    metar_station: "KLAX"
+    timezone: "America/Los_Angeles"
   - name: "Miami"
     series_ticker: "KXHIGHMIA"
     latitude: 25.7617
     longitude: -80.1918
     nws_station: "KMIA"
+    metar_station: "KMIA"
+    timezone: "America/New_York"
   - name: "Austin"
     series_ticker: "KXHIGHAUS"
     latitude: 30.2672
     longitude: -97.7431
     nws_station: "KAUS"
+    metar_station: "KAUS"
+    timezone: "America/Chicago"

@@ -10,14 +10,30 @@ from pydantic_settings import BaseSettings
 
 
 class KalshiConfig(BaseSettings):
+    model_config = {"env_file": ".env", "extra": "ignore"}
+
     kalshi_api_key: str
     kalshi_rsa_private_key_path: str = "./kalshi_private_key.pem"
+    kalshi_demo_api_key: str = ""
+    kalshi_demo_rsa_private_key_path: str = "./kalshi_demo_private_key.pem"
     kalshi_env: str = "demo"
+
+    @property
+    def active_api_key(self) -> str:
+        if self.kalshi_env == "demo" and self.kalshi_demo_api_key:
+            return self.kalshi_demo_api_key
+        return self.kalshi_api_key
+
+    @property
+    def active_private_key_path(self) -> str:
+        if self.kalshi_env == "demo" and self.kalshi_demo_api_key:
+            return self.kalshi_demo_rsa_private_key_path
+        return self.kalshi_rsa_private_key_path
 
     @property
     def base_url(self) -> str:
         if self.kalshi_env == "prod":
-            return "https://trading-api.kalshi.com/trade-api/v2"
+            return "https://api.elections.kalshi.com/trade-api/v2"
         return "https://demo-api.kalshi.co/trade-api/v2"
 
 
@@ -28,7 +44,7 @@ class KalshiClient:
         self._client = httpx.AsyncClient(timeout=30.0)
 
     def _load_private_key(self):
-        with open(self.config.kalshi_rsa_private_key_path, "rb") as f:
+        with open(self.config.active_private_key_path, "rb") as f:
             return serialization.load_pem_private_key(f.read(), password=None)
 
     def _sign(self, timestamp_ms: int, method: str, path: str) -> str:
@@ -47,7 +63,7 @@ class KalshiClient:
         timestamp_ms = int(time.time() * 1000)
         signature = self._sign(timestamp_ms, method, path)
         return {
-            "KALSHI-ACCESS-KEY": self.config.kalshi_api_key,
+            "KALSHI-ACCESS-KEY": self.config.active_api_key,
             "KALSHI-ACCESS-SIGNATURE": signature,
             "KALSHI-ACCESS-TIMESTAMP": str(timestamp_ms),
         }

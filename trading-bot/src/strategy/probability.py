@@ -24,7 +24,7 @@ def compute_bucket_probabilities(
     for low, high in buckets:
         low_bound = low if low is not None else min(ensemble_temps) - 30
         high_bound = high if high is not None else max(ensemble_temps) + 30
-        prob, _ = quad(kde, low_bound, high_bound)
+        prob, _ = quad(lambda x: kde(x).item(), low_bound, high_bound)
         raw_probs.append(max(prob, min_prob))
 
     total = sum(raw_probs)

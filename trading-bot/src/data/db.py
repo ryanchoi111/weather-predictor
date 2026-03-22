@@ -30,6 +30,22 @@ CREATE TABLE IF NOT EXISTS signals (
     created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+CREATE TABLE IF NOT EXISTS pending_approvals (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    signal_id INTEGER NOT NULL REFERENCES signals(id),
+    discord_message_id TEXT NOT NULL,
+    city TEXT NOT NULL,
+    ticker TEXT NOT NULL,
+    side TEXT NOT NULL,
+    price_cents INTEGER NOT NULL,
+    contracts INTEGER NOT NULL,
+    event_ticker TEXT NOT NULL,
+    order_cost_cents INTEGER NOT NULL,
+    status TEXT NOT NULL DEFAULT 'pending',
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    resolved_at TEXT
+);
+
 CREATE TABLE IF NOT EXISTS trades (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     signal_id INTEGER REFERENCES signals(id),
@@ -92,6 +108,41 @@ class Database:
     async def get_todays_trades(self) -> list[dict]:
         cursor = await self._db.execute(
             "SELECT * FROM trades WHERE date(created_at) = date('now')"
+        )
+        rows = await cursor.fetchall()
+        return [dict(r) for r in rows]
+
+    async def save_pending_approval(
+        self, signal_id: int, discord_message_id: str, city: str, ticker: str,
+        side: str, price_cents: int, contracts: int, event_ticker: str, order_cost_cents: int,
+    ) -> int:
+        cursor = await self._db.execute(
+            """INSERT INTO pending_approvals
+            (signal_id, discord_message_id, city, ticker, side, price_cents, contracts, event_ticker, order_cost_cents)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (signal_id, discord_message_id, city, ticker, side, price_cents, contracts, event_ticker, order_cost_cents),
+        )
+        await self._db.commit()
+        return cursor.lastrowid
+
+    async def get_pending_approval(self, discord_message_id: str) -> dict | None:
+        cursor = await self._db.execute(
+            "SELECT * FROM pending_approvals WHERE discord_message_id = ?",
+            (discord_message_id,),
+        )
+        row = await cursor.fetchone()
+        return dict(row) if row else None
+
+    async def resolve_approval(self, approval_id: int, status: str) -> None:
+        await self._db.execute(
+            "UPDATE pending_approvals SET status = ?, resolved_at = datetime('now') WHERE id = ?",
+            (status, approval_id),
+        )
+        await self._db.commit()
+
+    async def get_pending_approvals(self) -> list[dict]:
+        cursor = await self._db.execute(
+            "SELECT * FROM pending_approvals WHERE status = 'pending'"
         )
         rows = await cursor.fetchall()
         return [dict(r) for r in rows]
