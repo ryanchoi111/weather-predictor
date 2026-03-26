@@ -62,9 +62,20 @@ async def process_settlements(
     Returns summary dict with counts.
     """
     already_settled = await db.get_unsettled_tickers()
-    # Get all signals and trades for matching
+
+    # Load all bucket predictions (model prob for every bucket, not just traded)
+    all_predictions = {}
+    try:
+        cursor = await db._db.execute("SELECT * FROM bucket_predictions")
+        rows = await cursor.fetchall()
+        for r in rows:
+            r = dict(r)
+            all_predictions[r["ticker"]] = r
+    except Exception:
+        pass
+
+    # Load signals (subset that passed edge threshold)
     all_signals = {}
-    all_trades = {}
     try:
         cursor = await db._db.execute("SELECT * FROM signals")
         rows = await cursor.fetchall()
@@ -73,6 +84,9 @@ async def process_settlements(
             all_signals[r["ticker"]] = r
     except Exception:
         pass
+
+    # Load trades
+    all_trades = {}
     try:
         cursor = await db._db.execute("SELECT * FROM trades WHERE status != 'cancelled'")
         rows = await cursor.fetchall()
@@ -105,9 +119,17 @@ async def process_settlements(
                 low, high = _parse_range(market.get("subtitle", "") or title)
 
                 # Check if we had a model prediction for this contract
+                # Prefer bucket_predictions (has ALL buckets), fall back to signals
+                prediction = all_predictions.get(ticker)
                 signal = all_signals.get(ticker)
-                model_prob = signal["model_prob"] if signal else None
-                market_price = signal["market_price_cents"] if signal else None
+                model_prob = None
+                market_price = None
+                if prediction:
+                    model_prob = prediction["model_prob"]
+                    market_price = prediction["market_price_cents"]
+                elif signal:
+                    model_prob = signal["model_prob"]
+                    market_price = signal["market_price_cents"]
 
                 # Check if we traded this contract
                 trade = all_trades.get(ticker)

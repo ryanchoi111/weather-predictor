@@ -40,6 +40,12 @@ def generate_signals(
         if price >= 95 or price <= 5:
             continue
 
+        # For YES signals, model_prob must be >= threshold
+        # For NO signals, (1 - model_prob) must be >= threshold
+        min_model_prob = 0.50
+        if prob < min_model_prob and (1 - prob) < min_model_prob:
+            continue
+
         model_cents = prob * 100
         edge = model_cents - price
 

@@ -233,6 +233,24 @@ class Database:
         rows = await cursor.fetchall()
         return [dict(r) for r in rows]
 
+    async def save_bucket_predictions(
+        self, forecast_id: int, city: str, event_ticker: str,
+        tickers: list[str], titles: list[str],
+        low_temps: list[float | None], high_temps: list[float | None],
+        model_probs: list[float], market_prices: list[int],
+    ) -> None:
+        """Save model probability for every bucket in an event."""
+        for ticker, title, low, high, prob, price in zip(
+            tickers, titles, low_temps, high_temps, model_probs, market_prices
+        ):
+            await self._db.execute(
+                """INSERT OR IGNORE INTO bucket_predictions
+                (forecast_id, city, event_ticker, ticker, title, low_temp, high_temp, model_prob, market_price_cents)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (forecast_id, city, event_ticker, ticker, title, low, high, prob, price),
+            )
+        await self._db.commit()
+
     async def save_settled_contract(
         self, ticker: str, event_ticker: str, city: str, title: str,
         low_temp: float | None, high_temp: float | None, result: str,

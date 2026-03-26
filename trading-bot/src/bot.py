@@ -273,6 +273,22 @@ class WeatherBot:
                 log.info("platt_scaling_applied", city=city["name"],
                          brier_improvement=f"{platt_model.brier_before - platt_model.brier_after:.4f}")
 
+            # Save model prediction for EVERY bucket (for calibration feedback)
+            try:
+                await self.db.save_bucket_predictions(
+                    forecast_id=forecast_id,
+                    city=city["name"],
+                    event_ticker=event["event_ticker"],
+                    tickers=[b.ticker for b in buckets],
+                    titles=[b.title for b in buckets],
+                    low_temps=[b.low_temp for b in buckets],
+                    high_temps=[b.high_temp for b in buckets],
+                    model_probs=model_probs,
+                    market_prices=[b.yes_price for b in buckets],
+                )
+            except Exception as e:
+                log.warning("bucket_predictions_save_failed", city=city["name"], error=str(e))
+
             if self.approval_bot:
                 try:
                     await self.approval_bot.send_forecast_summary(
