@@ -30,6 +30,8 @@ from .strategy.risk import RiskLimits, RiskState, RiskBreachError, check_pre_tra
 from .discord_bot import ApprovalBot
 from .nws import get_current_temp_f
 from .calibration.pipeline import run_calibration_pipeline
+from .calibration.feedback import load_calibration_model, apply_calibration
+from .settlement import process_settlements
 
 log = get_logger("bot")
 
@@ -97,8 +99,24 @@ class WeatherBot:
         return []
 
     async def run_cycle(self):
-        """Main trading cycle: forecast -> discover -> signal -> trade."""
+        """Main trading cycle: settlements -> forecast -> discover -> signal -> trade."""
         log.info("cycle_start")
+
+        # Check for newly settled contracts (all weather markets, not just our trades)
+        try:
+            settlement_summary = await process_settlements(self.kalshi, self.db)
+            if settlement_summary["new_settlements"] > 0:
+                log.info("settlements_recorded", **settlement_summary)
+                if self.approval_bot and settlement_summary["new_traded"] > 0:
+                    pnl = settlement_summary["total_pnl_cents"]
+                    pnl_str = f"+${pnl/100:.2f}" if pnl >= 0 else f"-${abs(pnl)/100:.2f}"
+                    await self.approval_bot.send_settlement_summary(
+                        new_settled=settlement_summary["new_settlements"],
+                        new_traded=settlement_summary["new_traded"],
+                        pnl_str=pnl_str,
+                    )
+        except Exception as e:
+            log.warning("settlement_check_failed", error=str(e))
 
         balance_cents = await get_balance(self.kalshi)
         self.risk_state.bankroll_cents = balance_cents
@@ -163,6 +181,63 @@ class WeatherBot:
             lead_hours=forecast.lead_hours,
         )
 
+        from datetime import date as date_cls
+        await self.db.save_forecast_actual(
+            forecast_id=forecast_id,
+            city=city["name"],
+            forecast_date=date_cls.today().isoformat(),
+            model_mean_f=forecast.mean_f,
+        )
+
+        # Run calibration (bias + METAR) once per city, reuse calibrated ensemble for all events
+        cal_cfg = self.calibration_cfg
+        bias_enabled = cal_cfg.get("bias_correction", {}).get("enabled", False)
+        metar_enabled = cal_cfg.get("metar_fusion", {}).get("enabled", False)
+        calibrated_temps = None
+        if bias_enabled or metar_enabled:
+            from datetime import datetime
+            from .calibration.bias_correction import load_bias_model, correct_ensemble, get_season
+            from .calibration.metar_client import fetch_todays_observations
+            from .calibration.metar_fusion import fuse_metar_with_ensemble
+            import numpy as np
+
+            calibrated = np.array(forecast.temperatures_f)
+            target_date = datetime.now()
+            season = get_season(target_date.date())
+
+            if bias_enabled:
+                bias_model = load_bias_model(
+                    city["name"], season,
+                    model_dir=cal_cfg.get("bias_correction", {}).get("model_dir", "./data/bias_models/"),
+                )
+                if bias_model is not None:
+                    calibrated = correct_ensemble(calibrated, bias_model)
+                    log.info("bias_correction_applied", city=city["name"], season=season,
+                             mae_before=bias_model.mae_before, mae_after=bias_model.mae_after)
+
+            if metar_enabled:
+                metar_station = city.get("metar_station")
+                if metar_station:
+                    try:
+                        observations = await fetch_todays_observations(metar_station)
+                        if observations:
+                            fusion = fuse_metar_with_ensemble(
+                                calibrated, observations,
+                                forecast_hour=target_date.hour,
+                                max_shift_f=cal_cfg.get("metar_fusion", {}).get("max_shift_f", 5.0),
+                            )
+                            calibrated = fusion.updated_ensemble
+                    except Exception as e:
+                        log.warning("metar_fusion_skipped", city=city["name"], error=str(e))
+
+            if np.std(calibrated) < 0.1:
+                log.warning("ensemble_degenerate", city=city["name"], std=f"{np.std(calibrated):.3f}F")
+                calibrated = calibrated + np.random.normal(0, 0.5, len(calibrated))
+
+            calibrated_temps = calibrated.tolist()
+            log.info("calibration_complete", city=city["name"], bias=bias_enabled, metar=metar_enabled,
+                     mean=f"{np.mean(calibrated):.1f}F", std=f"{np.std(calibrated):.1f}F")
+
         events = await get_weather_events(self.kalshi, city["series_ticker"])
         if not events:
             log.info("no_events", city=city["name"])
@@ -176,24 +251,13 @@ class WeatherBot:
 
             bucket_ranges = [(b.low_temp, b.high_temp) for b in buckets]
 
-            # Use calibration pipeline if enabled, otherwise raw KDE
-            cal_cfg = self.calibration_cfg
-            bias_enabled = cal_cfg.get("bias_correction", {}).get("enabled", False)
-            metar_enabled = cal_cfg.get("metar_fusion", {}).get("enabled", False)
-            if bias_enabled or metar_enabled:
-                from datetime import datetime
-                metar_station = city.get("metar_station") if metar_enabled else None
-                now_hour = datetime.now().hour
-                model_probs, cal_forecast = await run_calibration_pipeline(
-                    city=city["name"],
-                    ensemble_temps_f=forecast.temperatures_f,
-                    bucket_ranges=bucket_ranges,
-                    metar_station=metar_station,
-                    forecast_hour=now_hour,
-                    bias_model_dir=cal_cfg.get("bias_correction", {}).get("model_dir", "./data/bias_models/"),
+            if calibrated_temps is not None:
+                from .calibration.ensemble_calibration import compute_calibrated_bucket_probabilities
+                model_probs = compute_calibrated_bucket_probabilities(
+                    np.array(calibrated_temps),
+                    bucket_ranges,
                     kde_bandwidth=cal_cfg.get("ensemble", {}).get("kde_bandwidth", 0.3),
                     min_prob=strategy_cfg.get("min_probability_floor", 0.005),
-                    max_shift_f=cal_cfg.get("metar_fusion", {}).get("max_shift_f", 5.0),
                 )
             else:
                 model_probs = compute_bucket_probabilities(
@@ -201,6 +265,13 @@ class WeatherBot:
                     bucket_ranges,
                     min_prob=strategy_cfg.get("min_probability_floor", 0.005),
                 )
+
+            # Apply Platt scaling if calibration model exists (learned from settled contracts)
+            platt_model = load_calibration_model(city=city["name"])
+            if platt_model:
+                model_probs = apply_calibration(model_probs, platt_model)
+                log.info("platt_scaling_applied", city=city["name"],
+                         brier_improvement=f"{platt_model.brier_before - platt_model.brier_after:.4f}")
 
             if self.approval_bot:
                 try:

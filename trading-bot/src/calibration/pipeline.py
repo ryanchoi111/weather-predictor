@@ -66,6 +66,12 @@ async def run_calibration_pipeline(
         except Exception as e:
             log.warning("metar_fusion_skipped", city=city, error=str(e))
 
+    # Guard: if ensemble is too uniform (e.g. METAR floor clamped most members),
+    # add small jitter so KDE doesn't crash on singular covariance
+    if np.std(calibrated) < 0.1:
+        log.warning("ensemble_degenerate", city=city, std=f"{np.std(calibrated):.3f}F")
+        calibrated = calibrated + np.random.normal(0, 0.5, len(calibrated))
+
     # Module 3: Calibrated Bucket Probabilities
     calibrated_probs = compute_calibrated_bucket_probabilities(
         calibrated,

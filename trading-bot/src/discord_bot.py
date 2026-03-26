@@ -259,6 +259,45 @@ class ApprovalBot(discord.Client):
         await channel.send(embed=embed)
         log.info("cycle_summary_sent", total_signals=len(all_signals))
 
+    async def send_settlement_summary(
+        self, new_settled: int, new_traded: int, pnl_str: str,
+    ) -> None:
+        """Send settlement P&L notification."""
+        await self._ready_event.wait()
+        channel = self.get_channel(self.channel_id)
+        if not channel:
+            return
+
+        color = Color.green() if pnl_str.startswith("+") else Color.red()
+        embed = Embed(
+            title="Settlements",
+            description=(
+                f"**{new_settled}** contracts settled\n"
+                f"**{new_traded}** were our trades\n"
+                f"**P&L: {pnl_str}**"
+            ),
+            color=color,
+        )
+
+        # Get cumulative P&L
+        try:
+            summary = await self.db.get_trade_pnl_summary()
+            if summary and summary.get("total_trades"):
+                total_pnl = summary["total_pnl_cents"] or 0
+                wins = summary["wins"] or 0
+                total = summary["total_trades"] or 1
+                cum_str = f"+${total_pnl/100:.2f}" if total_pnl >= 0 else f"-${abs(total_pnl)/100:.2f}"
+                embed.add_field(
+                    name="Cumulative",
+                    value=f"Record: {wins}/{total} ({wins/total:.0%})\nTotal P&L: {cum_str}",
+                    inline=False,
+                )
+        except Exception:
+            pass
+
+        await channel.send(embed=embed)
+        log.info("settlement_summary_sent", pnl=pnl_str)
+
     async def handle_approval(self, interaction: Interaction, approved: bool):
         """Handle Approve/Reject button press."""
         message_id = str(interaction.message.id)
