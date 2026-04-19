@@ -1,0 +1,229 @@
+Backfilling 3 missing actuals...
+  Chicago 2026-03-31: model=62.7F actual=68.0F error=+5.3F
+  Miami 2026-03-31: model=74.0F actual=82.4F error=+8.4F
+  Austin 2026-03-31: model=70.6F actual=89.6F error=+19.0F
+Backfilled 3/3 records.
+  Austin (KAUS): exported 4 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 2 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 7 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 7 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 2 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 22 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 3 missing actuals...
+  Los Angeles 2026-04-02: model=68.1F actual=68.0F error=-0.1F
+  Miami 2026-04-02: model=73.8F actual=82.4F error=+8.6F
+  Austin 2026-04-02: model=71.1F actual=87.8F error=+16.7F
+Backfilled 3/3 records.
+  Austin (KAUS): exported 5 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 2 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 8 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 8 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 2 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 25 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+No unfilled actuals to backfill.
+  Austin (KAUS): exported 5 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 2 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 8 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 8 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 2 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 25 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 3 missing actuals...
+  New York 2026-04-04: model=63.6F actual=71.1F error=+7.5F
+  Miami 2026-04-04: model=73.1F actual=82.4F error=+9.3F
+  Austin 2026-04-04: model=71.4F actual=77.0F error=+5.6F
+Backfilled 3/3 records.
+  Austin (KAUS): exported 6 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 2 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 8 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 9 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 3 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 28 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 8 missing actuals...
+  Los Angeles 2026-04-05: model=67.0F actual=78.8F error=+11.8F
+  Miami 2026-04-05: model=74.1F actual=84.2F error=+10.1F
+  Los Angeles 2026-04-05: model=68.1F actual=78.8F error=+10.7F
+  Miami 2026-04-05: model=75.0F actual=84.2F error=+9.2F
+  New York 2026-04-05: model=61.2F actual=57.0F error=-4.2F
+  Los Angeles 2026-04-05: model=67.3F actual=78.8F error=+11.5F
+  Miami 2026-04-05: model=74.3F actual=84.2F error=+9.9F
+  Austin 2026-04-05: model=69.6F actual=64.9F error=-4.6F
+Backfilled 8/8 records.
+  Austin (KAUS): exported 7 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 2 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 11 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 12 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 36 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 2 missing actuals...
+  Los Angeles 2026-04-06: model=69.1F actual=77.0F error=+7.9F
+    NWS API error for KMIA on 2026-04-06: Server error '500 Internal Server Error' for url 'https://api.weather.gov/stations/KMIA/observations?start=2026-04-06T00%3A00%3A00Z&end=2026-04-07T00%3A00%3A00Z&limit=100'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+  Miami 2026-04-06: no NWS data available
+Backfilled 1/2 records.
+  Austin (KAUS): exported 7 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 2 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 12 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 12 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 37 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 3 missing actuals...
+  Miami 2026-04-06: model=73.3F actual=84.2F error=+10.9F
+  Los Angeles 2026-04-07: model=67.7F actual=69.8F error=+2.1F
+  Miami 2026-04-07: model=74.6F actual=84.2F error=+9.6F
+Backfilled 3/3 records.
+  Austin (KAUS): exported 7 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 2 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 13 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 14 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 40 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 6 missing actuals...
+  Los Angeles 2026-04-08: model=67.5F actual=71.6F error=+4.1F
+  Miami 2026-04-08: model=73.9F actual=81.0F error=+7.1F
+  Chicago 2026-04-08: model=60.6F actual=71.6F error=+11.0F
+  Los Angeles 2026-04-08: model=66.2F actual=71.6F error=+5.4F
+  Miami 2026-04-08: model=73.3F actual=81.0F error=+7.7F
+  Austin 2026-04-08: model=71.2F actual=80.6F error=+9.4F
+Backfilled 6/6 records.
+  Austin (KAUS): exported 8 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 3 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 15 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 16 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 46 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+No unfilled actuals to backfill.
+  Austin (KAUS): exported 8 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 3 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 15 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 16 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 46 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+No unfilled actuals to backfill.
+  Austin (KAUS): exported 8 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 3 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 15 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 16 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 46 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+No unfilled actuals to backfill.
+  Austin (KAUS): exported 8 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 3 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 15 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 16 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 46 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+No unfilled actuals to backfill.
+  Austin (KAUS): exported 8 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 3 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 15 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 16 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 46 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+No unfilled actuals to backfill.
+  Austin (KAUS): exported 8 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 3 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 15 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 16 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 46 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 2 missing actuals...
+  Los Angeles 2026-04-14: model=67.1F actual=69.8F error=+2.7F
+  Miami 2026-04-14: model=74.7F actual=81.0F error=+6.3F
+Backfilled 2/2 records.
+  Austin (KAUS): exported 8 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 3 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 16 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 17 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 4 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 48 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 4 missing actuals...
+  New York 2026-04-15: model=62.2F actual=88.0F error=+25.8F
+  Chicago 2026-04-15: model=61.5F actual=72.0F error=+10.5F
+  Miami 2026-04-15: model=73.4F actual=80.1F error=+6.6F
+  Austin 2026-04-15: model=70.3F actual=86.0F error=+15.7F
+Backfilled 4/4 records.
+  Austin (KAUS): exported 9 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 4 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 16 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 18 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 5 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 52 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 5 missing actuals...
+  New York 2026-04-16: model=63.1F actual=88.0F error=+24.9F
+  Chicago 2026-04-16: model=62.1F actual=73.9F error=+11.8F
+    NWS API error for KLAX on 2026-04-16: The read operation timed out
+  Los Angeles 2026-04-16: no NWS data available
+  Miami 2026-04-16: model=74.1F actual=81.0F error=+6.9F
+  Austin 2026-04-16: model=70.6F actual=89.6F error=+19.0F
+Backfilled 4/5 records.
+  Austin (KAUS): exported 10 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 5 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 16 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 19 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 6 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 56 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 5 missing actuals...
+  Los Angeles 2026-04-16: model=68.3F actual=69.8F error=+1.5F
+  New York 2026-04-17: model=62.9F actual=80.1F error=+17.2F
+  Los Angeles 2026-04-17: model=68.0F actual=73.4F error=+5.4F
+  Miami 2026-04-17: model=75.2F actual=84.0F error=+8.8F
+  Austin 2026-04-17: model=70.2F actual=89.6F error=+19.4F
+Backfilled 5/5 records.
+  Austin (KAUS): exported 11 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 5 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 18 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 20 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 7 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 61 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities
+Backfilling 8 missing actuals...
+  New York 2026-04-18: model=63.3F actual=66.9F error=+3.7F
+  Los Angeles 2026-04-18: model=67.5F actual=75.9F error=+8.4F
+  Miami 2026-04-18: model=73.8F actual=84.9F error=+11.1F
+  Austin 2026-04-18: model=71.0F actual=66.2F error=-4.8F
+  New York 2026-04-18: model=62.8F actual=66.9F error=+4.1F
+  Los Angeles 2026-04-18: model=68.1F actual=75.9F error=+7.8F
+  Miami 2026-04-18: model=73.4F actual=84.9F error=+11.6F
+  Austin 2026-04-18: model=70.5F actual=66.2F error=-4.3F
+Backfilled 8/8 records.
+  Austin (KAUS): exported 13 pairs to data/hindcasts/kaus_hindcasts.csv
+  Chicago (KORD): exported 5 pairs to data/hindcasts/kord_hindcasts.csv
+  Los Angeles (KLAX): exported 20 pairs to data/hindcasts/klax_hindcasts.csv
+  Miami (KMIA): exported 22 pairs to data/hindcasts/kmia_hindcasts.csv
+  New York (KNYC): exported 9 pairs to data/hindcasts/knyc_hindcasts.csv
+
+Total: 69 paired records across 5 cities.
+Now retrain bias models: python -m scripts.train_bias_models --all-cities

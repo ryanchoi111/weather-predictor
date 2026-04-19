@@ -422,7 +422,7 @@ class WeatherBot:
             stderr=subprocess.DEVNULL,
         )
 
-        scheduler = AsyncIOScheduler()
+        scheduler = AsyncIOScheduler(job_defaults={"misfire_grace_time": 3600, "coalesce": True})
         trading_cfg = self.config.get("trading", {})
         tz = trading_cfg.get("timezone", "America/New_York")
 

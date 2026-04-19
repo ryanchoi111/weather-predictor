@@ -1,0 +1,379 @@
+Exception ignored error evaluating path:
+Traceback (most recent call last):
+  File "<frozen getpath>", line 353, in <module>
+InterruptedError: [Errno 4] Interrupted system call
+Fatal Python error: error evaluating path
+Python runtime state: core initialized
+
+Current thread 0x00000001f8f3a0c0 (most recent call first):
+  <no Python frame>
+Training on 107 settled contracts...
+
+2026-04-02 06:20:01 [info     ] calibration_model_trained      a=0.4779 b=-1.2649 brier_after=0.1677 brier_before=0.2683 city=global n_samples=107
+2026-04-02 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2683 -> 0.1677 (107 samples)
+2026-04-02 06:20:02 [info     ] insufficient_calibration_data  city='New York' min_required=30 n_samples=21
+New York: 21 samples (need 30+), using global fallback
+2026-04-02 06:20:02 [info     ] insufficient_calibration_data  city=Chicago min_required=30 n_samples=19
+Chicago: 19 samples (need 30+), using global fallback
+2026-04-02 06:20:02 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-02 06:20:02 [info     ] calibration_model_trained      a=0.6516 b=-1.2776 brier_after=0.1643 brier_before=0.2091 city=Miami n_samples=40
+2026-04-02 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.2091 -> 0.1643 (40 samples)
+2026-04-02 06:20:02 [info     ] insufficient_calibration_data  city=Austin min_required=30 n_samples=27
+Austin: 27 samples (need 30+), using global fallback
+
+Run with --report to see full calibration breakdown.
+Training on 131 settled contracts...
+
+2026-04-03 06:20:01 [info     ] calibration_model_trained      a=0.5274 b=-1.2982 brier_after=0.1633 brier_before=0.2445 city=global n_samples=131
+2026-04-03 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2445 -> 0.1633 (131 samples)
+2026-04-03 06:20:01 [info     ] insufficient_calibration_data  city='New York' min_required=30 n_samples=27
+New York: 27 samples (need 30+), using global fallback
+2026-04-03 06:20:01 [info     ] insufficient_calibration_data  city=Chicago min_required=30 n_samples=25
+Chicago: 25 samples (need 30+), using global fallback
+2026-04-03 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-03 06:20:01 [info     ] calibration_model_trained      a=0.6622 b=-1.2985 brier_after=0.1615 brier_before=0.2007 city=Miami n_samples=46
+2026-04-03 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.2007 -> 0.1615 (46 samples)
+2026-04-03 06:20:01 [info     ] calibration_model_trained      a=0.2872 b=-1.2183 brier_after=0.1716 brier_before=0.3335 city=Austin n_samples=33
+2026-04-03 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.3335 -> 0.1716 (33 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 131 settled contracts...
+
+2026-04-04 06:20:01 [info     ] calibration_model_trained      a=0.5274 b=-1.2982 brier_after=0.1633 brier_before=0.2445 city=global n_samples=131
+2026-04-04 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2445 -> 0.1633 (131 samples)
+2026-04-04 06:20:01 [info     ] insufficient_calibration_data  city='New York' min_required=30 n_samples=27
+New York: 27 samples (need 30+), using global fallback
+2026-04-04 06:20:01 [info     ] insufficient_calibration_data  city=Chicago min_required=30 n_samples=25
+Chicago: 25 samples (need 30+), using global fallback
+2026-04-04 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-04 06:20:01 [info     ] calibration_model_trained      a=0.6622 b=-1.2985 brier_after=0.1615 brier_before=0.2007 city=Miami n_samples=46
+2026-04-04 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.2007 -> 0.1615 (46 samples)
+2026-04-04 06:20:01 [info     ] calibration_model_trained      a=0.2872 b=-1.2183 brier_after=0.1716 brier_before=0.3335 city=Austin n_samples=33
+2026-04-04 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.3335 -> 0.1716 (33 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 161 settled contracts...
+
+2026-04-05 06:20:01 [info     ] calibration_model_trained      a=0.5654 b=-1.3252 brier_after=0.1595 brier_before=0.2256 city=global n_samples=161
+2026-04-05 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2256 -> 0.1595 (161 samples)
+2026-04-05 06:20:01 [info     ] insufficient_calibration_data  city='New York' min_required=30 n_samples=27
+New York: 27 samples (need 30+), using global fallback
+2026-04-05 06:20:01 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-05 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-05 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-05 06:20:01 [info     ] calibration_model_trained      a=0.6771 b=-1.3274 brier_after=0.1575 brier_before=0.1890 city=Miami n_samples=58
+2026-04-05 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1890 -> 0.1575 (58 samples)
+2026-04-05 06:20:02 [info     ] calibration_model_trained      a=0.3994 b=-1.2800 brier_after=0.1649 brier_before=0.2826 city=Austin n_samples=45
+2026-04-05 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2826 -> 0.1649 (45 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 179 settled contracts...
+
+2026-04-06 06:20:01 [info     ] calibration_model_trained      a=0.5825 b=-1.3370 brier_after=0.1578 brier_before=0.2172 city=global n_samples=179
+2026-04-06 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2172 -> 0.1578 (179 samples)
+2026-04-06 06:20:01 [info     ] calibration_model_trained      a=0.4338 b=-1.3698 brier_after=0.1534 brier_before=0.2462 city='New York' n_samples=33
+2026-04-06 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2462 -> 0.1534 (33 samples)
+2026-04-06 06:20:01 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-06 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-06 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-06 06:20:01 [info     ] calibration_model_trained      a=0.6825 b=-1.3378 brier_after=0.1560 brier_before=0.1848 city=Miami n_samples=64
+2026-04-06 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1848 -> 0.1560 (64 samples)
+2026-04-06 06:20:01 [info     ] calibration_model_trained      a=0.4378 b=-1.2997 brier_after=0.1625 brier_before=0.2659 city=Austin n_samples=51
+2026-04-06 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2659 -> 0.1625 (51 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 179 settled contracts...
+
+2026-04-07 06:20:01 [info     ] calibration_model_trained      a=0.5825 b=-1.3370 brier_after=0.1578 brier_before=0.2172 city=global n_samples=179
+2026-04-07 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2172 -> 0.1578 (179 samples)
+2026-04-07 06:20:01 [info     ] calibration_model_trained      a=0.4338 b=-1.3698 brier_after=0.1534 brier_before=0.2462 city='New York' n_samples=33
+2026-04-07 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2462 -> 0.1534 (33 samples)
+2026-04-07 06:20:01 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-07 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-07 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-07 06:20:01 [info     ] calibration_model_trained      a=0.6825 b=-1.3378 brier_after=0.1560 brier_before=0.1848 city=Miami n_samples=64
+2026-04-07 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1848 -> 0.1560 (64 samples)
+2026-04-07 06:20:01 [info     ] calibration_model_trained      a=0.4378 b=-1.2997 brier_after=0.1625 brier_before=0.2659 city=Austin n_samples=51
+2026-04-07 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2659 -> 0.1625 (51 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 197 settled contracts...
+
+2026-04-08 06:20:01 [info     ] calibration_model_trained      a=0.6024 b=-1.3473 brier_after=0.1563 brier_before=0.2092 city=global n_samples=197
+2026-04-08 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2092 -> 0.1563 (197 samples)
+2026-04-08 06:20:01 [info     ] calibration_model_trained      a=0.4862 b=-1.3829 brier_after=0.1518 brier_before=0.2285 city='New York' n_samples=39
+2026-04-08 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2285 -> 0.1518 (39 samples)
+2026-04-08 06:20:01 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-08 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-08 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-08 06:20:01 [info     ] calibration_model_trained      a=0.6992 b=-1.3476 brier_after=0.1546 brier_before=0.1788 city=Miami n_samples=70
+2026-04-08 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1788 -> 0.1546 (70 samples)
+2026-04-08 06:20:01 [info     ] calibration_model_trained      a=0.4687 b=-1.3151 brier_after=0.1606 brier_before=0.2527 city=Austin n_samples=57
+2026-04-08 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2527 -> 0.1606 (57 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 221 settled contracts...
+
+2026-04-09 06:20:02 [info     ] calibration_model_trained      a=0.6172 b=-1.3575 brier_after=0.1547 brier_before=0.2019 city=global n_samples=221
+2026-04-09 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2019 -> 0.1547 (221 samples)
+2026-04-09 06:20:02 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-09 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-09 06:20:02 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-09 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-09 06:20:02 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-09 06:20:02 [info     ] calibration_model_trained      a=0.7047 b=-1.3610 brier_after=0.1527 brier_before=0.1737 city=Miami n_samples=82
+2026-04-09 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1737 -> 0.1527 (82 samples)
+2026-04-09 06:20:02 [info     ] calibration_model_trained      a=0.4940 b=-1.3276 brier_after=0.1590 brier_before=0.2421 city=Austin n_samples=63
+2026-04-09 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2421 -> 0.1590 (63 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 221 settled contracts...
+
+2026-04-10 06:20:01 [info     ] calibration_model_trained      a=0.6172 b=-1.3575 brier_after=0.1547 brier_before=0.2019 city=global n_samples=221
+2026-04-10 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2019 -> 0.1547 (221 samples)
+2026-04-10 06:20:01 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-10 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-10 06:20:01 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-10 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-10 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-10 06:20:01 [info     ] calibration_model_trained      a=0.7047 b=-1.3610 brier_after=0.1527 brier_before=0.1737 city=Miami n_samples=82
+2026-04-10 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1737 -> 0.1527 (82 samples)
+2026-04-10 06:20:01 [info     ] calibration_model_trained      a=0.4940 b=-1.3276 brier_after=0.1590 brier_before=0.2421 city=Austin n_samples=63
+2026-04-10 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2421 -> 0.1590 (63 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 221 settled contracts...
+
+2026-04-11 06:20:01 [info     ] calibration_model_trained      a=0.6172 b=-1.3575 brier_after=0.1547 brier_before=0.2019 city=global n_samples=221
+2026-04-11 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2019 -> 0.1547 (221 samples)
+2026-04-11 06:20:01 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-11 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-11 06:20:01 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-11 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-11 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-11 06:20:01 [info     ] calibration_model_trained      a=0.7047 b=-1.3610 brier_after=0.1527 brier_before=0.1737 city=Miami n_samples=82
+2026-04-11 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1737 -> 0.1527 (82 samples)
+2026-04-11 06:20:01 [info     ] calibration_model_trained      a=0.4940 b=-1.3276 brier_after=0.1590 brier_before=0.2421 city=Austin n_samples=63
+2026-04-11 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2421 -> 0.1590 (63 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 221 settled contracts...
+
+2026-04-12 06:20:01 [info     ] calibration_model_trained      a=0.6172 b=-1.3575 brier_after=0.1547 brier_before=0.2019 city=global n_samples=221
+2026-04-12 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2019 -> 0.1547 (221 samples)
+2026-04-12 06:20:01 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-12 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-12 06:20:01 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-12 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-12 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-12 06:20:01 [info     ] calibration_model_trained      a=0.7047 b=-1.3610 brier_after=0.1527 brier_before=0.1737 city=Miami n_samples=82
+2026-04-12 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1737 -> 0.1527 (82 samples)
+2026-04-12 06:20:01 [info     ] calibration_model_trained      a=0.4940 b=-1.3276 brier_after=0.1590 brier_before=0.2421 city=Austin n_samples=63
+2026-04-12 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2421 -> 0.1590 (63 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 221 settled contracts...
+
+2026-04-13 06:20:02 [info     ] calibration_model_trained      a=0.6172 b=-1.3575 brier_after=0.1547 brier_before=0.2019 city=global n_samples=221
+2026-04-13 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2019 -> 0.1547 (221 samples)
+2026-04-13 06:20:02 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-13 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-13 06:20:02 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-13 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-13 06:20:02 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-13 06:20:02 [info     ] calibration_model_trained      a=0.7047 b=-1.3610 brier_after=0.1527 brier_before=0.1737 city=Miami n_samples=82
+2026-04-13 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1737 -> 0.1527 (82 samples)
+2026-04-13 06:20:02 [info     ] calibration_model_trained      a=0.4940 b=-1.3276 brier_after=0.1590 brier_before=0.2421 city=Austin n_samples=63
+2026-04-13 06:20:02 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2421 -> 0.1590 (63 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 221 settled contracts...
+
+2026-04-14 06:20:01 [info     ] calibration_model_trained      a=0.6172 b=-1.3575 brier_after=0.1547 brier_before=0.2019 city=global n_samples=221
+2026-04-14 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.2019 -> 0.1547 (221 samples)
+2026-04-14 06:20:01 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-14 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-14 06:20:01 [info     ] calibration_model_trained      a=0.7939 b=-1.3560 brier_after=0.1538 brier_before=0.1734 city=Chicago n_samples=31
+2026-04-14 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1734 -> 0.1538 (31 samples)
+2026-04-14 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-14 06:20:01 [info     ] calibration_model_trained      a=0.7047 b=-1.3610 brier_after=0.1527 brier_before=0.1737 city=Miami n_samples=82
+2026-04-14 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1737 -> 0.1527 (82 samples)
+2026-04-14 06:20:01 [info     ] calibration_model_trained      a=0.4940 b=-1.3276 brier_after=0.1590 brier_before=0.2421 city=Austin n_samples=63
+2026-04-14 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2421 -> 0.1590 (63 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 257 settled contracts...
+
+2026-04-15 06:20:01 [info     ] calibration_model_trained      a=0.6335 b=-1.3692 brier_after=0.1529 brier_before=0.1938 city=global n_samples=257
+2026-04-15 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.1938 -> 0.1529 (257 samples)
+2026-04-15 06:20:01 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-15 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-15 06:20:01 [info     ] calibration_model_trained      a=0.7772 b=-1.3788 brier_after=0.1506 brier_before=0.1658 city=Chicago n_samples=43
+2026-04-15 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1658 -> 0.1506 (43 samples)
+2026-04-15 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-15 06:20:01 [info     ] calibration_model_trained      a=0.7092 b=-1.3711 brier_after=0.1513 brier_before=0.1698 city=Miami n_samples=94
+2026-04-15 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1698 -> 0.1513 (94 samples)
+2026-04-15 06:20:01 [info     ] calibration_model_trained      a=0.5317 b=-1.3462 brier_after=0.1564 brier_before=0.2262 city=Austin n_samples=75
+2026-04-15 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2262 -> 0.1564 (75 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 257 settled contracts...
+
+2026-04-16 06:20:01 [info     ] calibration_model_trained      a=0.6335 b=-1.3692 brier_after=0.1529 brier_before=0.1938 city=global n_samples=257
+2026-04-16 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.1938 -> 0.1529 (257 samples)
+2026-04-16 06:20:01 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-16 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-16 06:20:01 [info     ] calibration_model_trained      a=0.7772 b=-1.3788 brier_after=0.1506 brier_before=0.1658 city=Chicago n_samples=43
+2026-04-16 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1658 -> 0.1506 (43 samples)
+2026-04-16 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-16 06:20:01 [info     ] calibration_model_trained      a=0.7092 b=-1.3711 brier_after=0.1513 brier_before=0.1698 city=Miami n_samples=94
+2026-04-16 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1698 -> 0.1513 (94 samples)
+2026-04-16 06:20:01 [info     ] calibration_model_trained      a=0.5317 b=-1.3462 brier_after=0.1564 brier_before=0.2262 city=Austin n_samples=75
+2026-04-16 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2262 -> 0.1564 (75 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 263 settled contracts...
+
+2026-04-17 06:20:01 [info     ] calibration_model_trained      a=0.6388 b=-1.3712 brier_after=0.1526 brier_before=0.1921 city=global n_samples=263
+2026-04-17 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.1921 -> 0.1526 (263 samples)
+2026-04-17 06:20:01 [info     ] calibration_model_trained      a=0.5190 b=-1.3914 brier_after=0.1506 brier_before=0.2169 city='New York' n_samples=45
+2026-04-17 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2169 -> 0.1506 (45 samples)
+2026-04-17 06:20:01 [info     ] calibration_model_trained      a=0.7772 b=-1.3788 brier_after=0.1506 brier_before=0.1658 city=Chicago n_samples=43
+2026-04-17 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1658 -> 0.1506 (43 samples)
+2026-04-17 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-17 06:20:01 [info     ] calibration_model_trained      a=0.7189 b=-1.3759 brier_after=0.1505 brier_before=0.1666 city=Miami n_samples=100
+2026-04-17 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1666 -> 0.1505 (100 samples)
+2026-04-17 06:20:01 [info     ] calibration_model_trained      a=0.5317 b=-1.3462 brier_after=0.1564 brier_before=0.2262 city=Austin n_samples=75
+2026-04-17 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2262 -> 0.1564 (75 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 287 settled contracts...
+
+2026-04-18 06:20:01 [info     ] calibration_model_trained      a=0.6466 b=-1.3770 brier_after=0.1517 brier_before=0.1881 city=global n_samples=287
+2026-04-18 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.1881 -> 0.1517 (287 samples)
+2026-04-18 06:20:01 [info     ] calibration_model_trained      a=0.5436 b=-1.3977 brier_after=0.1496 brier_before=0.2082 city='New York' n_samples=51
+2026-04-18 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.2082 -> 0.1496 (51 samples)
+2026-04-18 06:20:01 [info     ] calibration_model_trained      a=0.7716 b=-1.3860 brier_after=0.1495 brier_before=0.1634 city=Chicago n_samples=49
+2026-04-18 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1634 -> 0.1495 (49 samples)
+2026-04-18 06:20:01 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-18 06:20:01 [info     ] calibration_model_trained      a=0.7197 b=-1.3795 brier_after=0.1500 brier_before=0.1654 city=Miami n_samples=106
+2026-04-18 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1654 -> 0.1500 (106 samples)
+2026-04-18 06:20:01 [info     ] calibration_model_trained      a=0.5464 b=-1.3533 brier_after=0.1554 brier_before=0.2201 city=Austin n_samples=81
+2026-04-18 06:20:01 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2201 -> 0.1554 (81 samples)
+
+Run with --report to see full calibration breakdown.
+Training on 329 settled contracts...
+
+2026-04-19 06:20:03 [info     ] calibration_model_trained      a=0.6577 b=-1.3851 brier_after=0.1504 brier_before=0.1825 city=global n_samples=329
+2026-04-19 06:20:03 [info     ] calibration_model_saved        path=data/calibration_models/global_platt.json
+Global: Brier 0.1825 -> 0.1504 (329 samples)
+2026-04-19 06:20:03 [info     ] calibration_model_trained      a=0.5792 b=-1.4064 brier_after=0.1482 brier_before=0.1959 city='New York' n_samples=63
+2026-04-19 06:20:03 [info     ] calibration_model_saved        path=data/calibration_models/new_york_platt.json
+New York: Brier 0.1959 -> 0.1482 (63 samples)
+2026-04-19 06:20:03 [info     ] calibration_model_trained      a=0.7671 b=-1.3917 brier_after=0.1487 brier_before=0.1616 city=Chicago n_samples=55
+2026-04-19 06:20:03 [info     ] calibration_model_saved        path=data/calibration_models/chicago_platt.json
+Chicago: Brier 0.1616 -> 0.1487 (55 samples)
+2026-04-19 06:20:03 [info     ] insufficient_calibration_data  city='Los Angeles' min_required=30 n_samples=0
+Los Angeles: 0 samples (need 30+), using global fallback
+2026-04-19 06:20:03 [info     ] calibration_model_trained      a=0.7209 b=-1.3856 brier_after=0.1492 brier_before=0.1633 city=Miami n_samples=118
+2026-04-19 06:20:03 [info     ] calibration_model_saved        path=data/calibration_models/miami_platt.json
+Miami: Brier 0.1633 -> 0.1492 (118 samples)
+2026-04-19 06:20:03 [info     ] calibration_model_trained      a=0.5702 b=-1.3648 brier_after=0.1537 brier_before=0.2102 city=Austin n_samples=93
+2026-04-19 06:20:03 [info     ] calibration_model_saved        path=data/calibration_models/austin_platt.json
+Austin: Brier 0.2102 -> 0.1537 (93 samples)
+
+Run with --report to see full calibration breakdown.

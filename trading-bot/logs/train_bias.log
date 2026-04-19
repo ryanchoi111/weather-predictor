@@ -1,0 +1,1179 @@
+Exception ignored error evaluating path:
+Traceback (most recent call last):
+  File "<frozen getpath>", line 353, in <module>
+InterruptedError: [Errno 4] Interrupted system call
+Fatal Python error: error evaluating path
+Python runtime state: core initialized
+
+Current thread 0x00000001f8f3a0c0 (most recent call first):
+  <no Python frame>
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.42F -> 0.36F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.39F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.40F -> 0.34F
+  SON: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.40F -> 0.30F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.26F
+  MAM: only 1 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.26F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.38F -> 0.26F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.42F -> 0.32F
+  MAM: only 5 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.41F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.42F -> 0.34F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.32F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.23F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.38F -> 0.29F
+  SON: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.40F -> 0.31F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.38F -> 0.27F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.38F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-02 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.45F -> 0.35F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.38F -> 0.28F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.29F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.42F -> 0.36F
+  SON: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.36F -> 0.24F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.27F
+  MAM: only 1 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.42F -> 0.32F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.25F
+  SON: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.27F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.41F -> 0.32F
+  MAM: only 5 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.45F -> 0.37F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.38F -> 0.31F
+  SON: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.40F -> 0.35F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.32F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.45F -> 0.37F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.46F -> 0.35F
+  SON: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.32F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.41F -> 0.31F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.41F -> 0.33F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.42F -> 0.31F
+  SON: only 0 paired samples, using identity baseline
+2026-04-03 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.42F -> 0.32F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.39F -> 0.30F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.41F -> 0.31F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.42F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.42F -> 0.32F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.38F -> 0.24F
+  MAM: only 1 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.43F -> 0.33F
+  SON: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.44F -> 0.35F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.40F -> 0.29F
+  MAM: only 5 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.37F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.37F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.41F -> 0.31F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.42F -> 0.31F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.31F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.29F
+  SON: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.38F -> 0.26F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.28F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.37F -> 0.26F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.38F -> 0.23F
+  SON: only 0 paired samples, using identity baseline
+2026-04-04 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.44F -> 0.35F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-05 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.37F -> 0.27F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-05 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.39F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-05 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.39F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-05 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.43F -> 0.30F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-05 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.28F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-05 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-05 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.40F -> 0.35F
+  SON: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.28F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.43F -> 0.32F
+  MAM: only 6 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.42F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.41F -> 0.29F
+  SON: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.41F -> 0.29F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.41F -> 0.34F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.37F -> 0.27F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.27F
+  MAM: only 6 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.44F -> 0.35F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.38F -> 0.25F
+  SON: only 0 paired samples, using identity baseline
+2026-04-05 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.42F -> 0.34F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.41F -> 0.33F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.41F -> 0.35F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.40F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.36F -> 0.25F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.26F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.38F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.38F -> 0.29F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.38F -> 0.30F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.40F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.37F -> 0.28F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.37F -> 0.24F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.45F -> 0.31F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.40F -> 0.31F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.27F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.34F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.38F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-06 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.37F -> 0.27F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.40F -> 0.28F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.40F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.37F -> 0.24F
+  SON: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.35F -> 0.24F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.42F -> 0.31F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.43F -> 0.32F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.38F -> 0.29F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.39F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.39F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.40F -> 0.31F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.31F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.33F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.42F -> 0.34F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.29F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.40F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-07 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.36F -> 0.26F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.38F -> 0.29F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.36F -> 0.25F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.39F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.40F -> 0.30F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.30F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.31F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.42F -> 0.31F
+  SON: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.27F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.39F -> 0.31F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.40F -> 0.31F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.37F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.39F -> 0.29F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.30F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.45F -> 0.38F
+  SON: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.40F -> 0.30F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.28F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.42F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.36F -> 0.25F
+  SON: only 0 paired samples, using identity baseline
+2026-04-08 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.30F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.41F -> 0.30F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.41F -> 0.26F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.37F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.39F -> 0.26F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.30F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.42F -> 0.32F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.40F -> 0.26F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.40F -> 0.31F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.37F -> 0.26F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.43F -> 0.34F
+  SON: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.41F -> 0.33F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.42F -> 0.32F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.42F -> 0.35F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.33F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.41F -> 0.31F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.29F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.42F -> 0.36F
+  SON: only 0 paired samples, using identity baseline
+2026-04-09 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.31F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.42F -> 0.29F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.42F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.39F -> 0.26F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.26F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.24F
+  SON: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.42F -> 0.32F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.39F -> 0.27F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.41F -> 0.35F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.42F -> 0.33F
+  SON: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.43F -> 0.35F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.30F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.42F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-10 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.27F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-10 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.42F -> 0.28F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-10 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.32F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-10 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.29F
+  SON: only 0 paired samples, using identity baseline
+2026-04-10 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.42F -> 0.33F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.42F -> 0.30F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.39F -> 0.25F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.41F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.40F -> 0.31F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.29F
+  MAM: only 2 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.41F -> 0.34F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.43F -> 0.35F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.38F -> 0.28F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.42F -> 0.32F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.39F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.38F -> 0.28F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.41F -> 0.26F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.23F
+  SON: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.31F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.38F -> 0.28F
+  MAM: only 7 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.37F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.38F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-11 06:15:04 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.31F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.43F -> 0.33F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.40F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.38F -> 0.33F
+  SON: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.39F -> 0.23F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.27F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.36F -> 0.23F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.33F
+  SON: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.42F -> 0.34F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.39F -> 0.30F
+  MAM: only 10 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.25F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.38F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.37F -> 0.28F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.41F -> 0.32F
+  MAM: only 11 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.29F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.38F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.45F -> 0.34F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.31F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.43F -> 0.32F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.25F
+  SON: only 0 paired samples, using identity baseline
+2026-04-12 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.42F -> 0.29F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.36F -> 0.25F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.40F -> 0.34F
+  SON: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.42F -> 0.26F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.38F -> 0.31F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.40F -> 0.30F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.39F -> 0.27F
+  MAM: only 10 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.35F -> 0.25F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.39F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.39F -> 0.30F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.29F
+  MAM: only 11 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.40F -> 0.29F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.26F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.31F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.42F -> 0.32F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-13 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.31F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.43F -> 0.30F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.39F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.39F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.40F -> 0.27F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.43F -> 0.30F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.33F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.42F -> 0.31F
+  MAM: only 10 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.40F -> 0.32F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.42F -> 0.33F
+  SON: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.40F -> 0.32F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.38F -> 0.29F
+  MAM: only 11 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.26F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.31F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.37F -> 0.27F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.29F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.29F
+  SON: only 0 paired samples, using identity baseline
+2026-04-14 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.40F -> 0.28F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.36F -> 0.26F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.37F -> 0.25F
+  SON: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.41F -> 0.28F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.37F -> 0.25F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.40F -> 0.29F
+  SON: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.43F -> 0.35F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.40F -> 0.28F
+  MAM: only 10 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.37F -> 0.26F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.41F -> 0.35F
+  SON: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.39F -> 0.29F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.38F -> 0.28F
+  MAM: only 11 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.33F
+  SON: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.43F -> 0.34F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.42F -> 0.32F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.43F -> 0.34F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.44F -> 0.33F
+  SON: only 0 paired samples, using identity baseline
+2026-04-15 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.31F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.42F -> 0.31F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.44F -> 0.35F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.41F -> 0.36F
+  SON: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.43F -> 0.29F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.40F -> 0.28F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.29F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.43F -> 0.32F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.43F -> 0.33F
+  MAM: only 10 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.39F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.41F -> 0.29F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.44F -> 0.36F
+  MAM: only 11 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.43F -> 0.31F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.27F
+  SON: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.43F -> 0.37F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.32F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.40F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-16 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.29F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.37F -> 0.19F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.40F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.40F -> 0.26F
+  SON: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.41F -> 0.29F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.37F -> 0.26F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.44F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.45F -> 0.31F
+  SON: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.40F -> 0.31F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.43F -> 0.35F
+  MAM: only 10 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.40F -> 0.29F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.44F -> 0.38F
+  SON: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.42F -> 0.33F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.38F -> 0.26F
+  MAM: only 11 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.38F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.26F
+  SON: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.39F -> 0.27F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.41F -> 0.29F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.41F -> 0.26F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.33F
+  SON: only 0 paired samples, using identity baseline
+2026-04-17 06:15:03 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.37F -> 0.27F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.38F -> 0.26F
+  MAM: only 4 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.38F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.41F -> 0.31F
+  SON: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.42F -> 0.29F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.39F -> 0.27F
+  MAM: only 3 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.26F
+  SON: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.30F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.39F -> 0.27F
+  MAM: only 10 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.39F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.42F -> 0.34F
+  SON: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.41F -> 0.31F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.45F -> 0.38F
+  MAM: only 11 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.41F -> 0.30F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.41F -> 0.35F
+  SON: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.43F -> 0.31F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.42F -> 0.34F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.42F -> 0.38F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.37F -> 0.25F
+  SON: only 0 paired samples, using identity baseline
+2026-04-18 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.40F -> 0.33F
+Training New York (KNYC)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_DJF.json'
+  DJF: 180 samples, MAE 0.37F -> 0.27F
+  MAM: only 8 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_MAM.json'
+  MAM: 185 samples, MAE 0.39F -> 0.27F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_JJA.json'
+  JJA: 184 samples, MAE 0.39F -> 0.29F
+  SON: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path='data/bias_models/new york_SON.json'
+  SON: 182 samples, MAE 0.43F -> 0.31F
+Training Chicago (KORD)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_DJF.json
+  DJF: 180 samples, MAE 0.41F -> 0.30F
+  MAM: only 5 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_MAM.json
+  MAM: 185 samples, MAE 0.42F -> 0.33F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.28F
+  SON: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/chicago_SON.json
+  SON: 182 samples, MAE 0.42F -> 0.31F
+Training Los Angeles (KLAX)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_DJF.json'
+  DJF: 180 samples, MAE 0.38F -> 0.29F
+  MAM: only 14 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_MAM.json'
+  MAM: 185 samples, MAE 0.39F -> 0.28F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_JJA.json'
+  JJA: 184 samples, MAE 0.40F -> 0.30F
+  SON: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path='data/bias_models/los angeles_SON.json'
+  SON: 182 samples, MAE 0.44F -> 0.38F
+Training Miami (KMIA)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_DJF.json
+  DJF: 180 samples, MAE 0.38F -> 0.25F
+  MAM: only 16 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_MAM.json
+  MAM: 185 samples, MAE 0.39F -> 0.26F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_JJA.json
+  JJA: 184 samples, MAE 0.40F -> 0.32F
+  SON: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/miami_SON.json
+  SON: 182 samples, MAE 0.41F -> 0.29F
+Training Austin (KAUS)...
+  DJF: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_DJF.json
+  DJF: 180 samples, MAE 0.43F -> 0.35F
+  MAM: only 12 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_MAM.json
+  MAM: 185 samples, MAE 0.41F -> 0.33F
+  JJA: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_JJA.json
+  JJA: 184 samples, MAE 0.39F -> 0.29F
+  SON: only 0 paired samples, using identity baseline
+2026-04-19 06:15:02 [info     ] bias_model_saved               path=data/bias_models/austin_SON.json
+  SON: 182 samples, MAE 0.38F -> 0.31F
